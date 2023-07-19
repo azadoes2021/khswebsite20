@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}Create Post{% endblock %}
+{% block content %}
+
+<br/>
+<br/>
+<br/>
+<h1>add_basedb</h1>
+
+
+<section class="s2">
+  <div> {{ error }} </div>
+  
+  <!-- widget_tweaks 사용하여 템플릿을 만들었음. [How to] Django로 블로그 만들어보기 [widget tweaks] https://www.youtube.com/watch?v=jS4fLseF_cs -->
+      {% load widget_tweaks %}
+      <form action="" method="post" class="contact-form">      
+      {% csrf_token %}
+
+      {% for field in form.visible_fields %}
+      <!-- <p>{{ field.label }}</p><br/> -->
+      <label>{{ field.label }}</label><br/>      
+      {{field|add_class:'input-field'}} 
+      <br><br>    
+      {% endfor %}    
+      <button type="submit" class="btn">Post</button>
+      </form>
+    </div>
+  </section>
+  
+
+
+  
+    
+
+{% endblock %}
+
+
+
+
+<!-- <section class="s2">  
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

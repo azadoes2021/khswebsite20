@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block title %}{{ post.title_tag }}{% endblock %}
+{% block content %}
+<br/>
+<section class="s2">
+<h1>{{ post.title }}</h1>
+<small>
+
+  <!-- <h1>{{ user.id }}</h1>
+  <h1>{{ post.author.id }}</h1> -->
+  <!-- DateTimeField 사용하여 년/월/일 시간/분 나오게 -->
+  <!-- {{post.created|date:'Y-m-d H:i'}} -->
+  <!-- DateTimeField 사용하여 년/월/일 나오게 -->
+  <!-- By: {{ post.author.first_name }} {{ post.author.last_name}} - {{post.post_date|date:'Y-m-d'}} -->
+</small><br/>
+{% if post.image %}
+<img src="{{ post.image.url }}" alt="">
+{% endif %}
+
+<br>
+<br>
+등록일: {{post.created|date:'Y-m-d H:i'}}
+<br/>
+
+성함: ooo 전화번호: 010-0000-0000   <!-- 성함: {{ post. }} 전화번호: {{ post. }} -->
+<br>
+<br>
+{{ post.body|safe }}
+
+
+
+<br/><br/>
+<br/><br/>
+<!-- <input type="button" value="Go back!" onclick="history.back()"> -->
+<a class="btn" onclick="history.back()">뒤로가기</a>
+
+<a href="{% url 'posts' %}" class="btn">목록</a>
+
+
+{% if request.user == post.author %}
+<a href="{% url 'update_post' post.pk %}" class="btn">수정</a>
+<a href="{% url 'delete_post' post.pk %}" class="btn">삭제</a>
+{% endif %}
+
+
+
+<!-- {% if user.is_authenticated %}
+<a href="{% url 'update_post' post.pk %}" class="btn">Edit02</a>
+<a href="{% url 'delete_post' post.pk %}" class="btn">Delete02</a>
+{% endif %} -->
+
+
+
+
+</section>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

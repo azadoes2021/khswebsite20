@@ -1,0 +1,206 @@
+
+@media screen and (max-width: 3000px) {
+  /* 추가함 23.0627 cdn 덮어씀 */ 
+.owl-carousel.owl-drag .owl-item {
+    min-height: 383px;
+    /* height: 0%; */
+    height: 70%;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    /* border: 4px solid white; */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+  .owl-stage{
+      position: relative;
+      background: #000;
+  }
+  .owl-item{
+      width:auto;
+      background: white;
+      height: 448px;
+  }
+
+  .owl-main{
+      width:auto;
+      background: white;
+      height: 2000px !important;
+  }
+
+  .owl-item:nth-child(even){
+      background: white;
+      /* background: #f8f9fa; */
+  }
+
+  .owl-nav img:nth-child(1){
+    width: 25px;
+    /* width: 0px; */
+  }
+
+
+  .owl-prev, .owl-next {
+      position: absolute;
+      transition: 0.5s;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.7;
+  }
+  .owl-prev{
+      left: 15px;
+  }
+  .owl-next{
+      right: 15px;
+  }
+  .owl-prev:hover , .owl-next:hover{
+      background: transparent !important;
+      opacity: 0.9;
+  }
+  .owl-dots{
+      position: absolute;
+      bottom: 15px;
+      left:50%;
+      transform: translateX(-50%);
+      /* background: #000; */
+      background: darkgrey;
+      padding: 5px 5px 2px 5px;
+      border-radius: 20px;
+      opacity: 0.6;
+  }
+  .owl-dot:hover span{
+      /* background: yellow!important; */
+  }
+   .active  span {
+
+      background: black !important;
+  }
+  .owl-item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .hello{
+      text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .owl-carousel.owl-drag .owl-item {
+        min-height: 383px;
+        /* height: 0%; */
+        height: 70%;
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+        /* border: 4px solid white; */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+    }
+  .owl-stage{
+      position: relative;
+      background: #000;
+  }
+  .owl-item{
+      width:auto;
+      background: white;
+      height: 300px;
+  }
+
+
+  .owl-item:nth-child(even){
+      background: white;
+  }
+
+  .owl-nav img:nth-child(1){
+    /* width: 25px; */
+    width: 0px;
+  }
+
+
+  .owl-prev, .owl-next {
+      position: absolute;
+      transition: 0.5s;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.7;
+  }
+  .owl-prev{
+      left: 15px;
+  }
+  .owl-next{
+      right: 15px;
+  }
+  .owl-prev:hover , .owl-next:hover{
+      background: transparent !important;
+      opacity: 0.9;
+  }
+  .owl-dots{
+      position: absolute;
+      bottom: 15px;
+      left:50%;
+      transform: translateX(-50%);
+      /* background: #000; */
+      background: darkgrey;
+      padding: 5px 5px 2px 5px;
+      border-radius: 20px;
+      opacity: 0.6;
+  }
+  .owl-dot:hover span{
+      /* background: yellow!important; */
+  }
+   .active  span {
+
+      background: black !important;
+  }
+  .owl-item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .hello{
+      text-align: center;
+  }
+
+}
+
+
+
+
+
+/* swiper js */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* background: #fff; */
+    background: #f8f9fa;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  /* .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */

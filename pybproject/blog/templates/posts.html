@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="" id="" style="padding: 15px 246px 0px 177px;"><br>
+  <span style="padding: 0px 16px 0 0px;"><a href="{% url 'basedbboard' %}">홈페이지 DB</a></span><span style="padding: 0px 16px 0 0px;"><a href="{% url 'posts' %}">세금 News & 정보</a></span>  
+  <span style="padding: 0px 16px 0 0px;">{% if user.is_superuser %}<a href="{% url 'add_post' %}" class="btn" style="background-color: #efefef;">글작성</a>{% endif %}</span>  
+  <span>{% if user.is_authenticated %}<a href="{% url 'logout' %}" style="text-align: center;" class="btn">로그아웃</a></span>{% endif %}</span>
+  <h1 style="padding: 30px;">세금 News & 정보</h1>
+  
+
+
+
+  
+  
+  
+  
+  <table style="text-align: center;">
+    <thead>
+      <tr style="height: 5rem">
+        <th style="width:7%;">No</th>
+        
+        <th style="width: 17%;">제목</th>
+        <th style="width: 11%;">이미지</th>        
+        <th style="width: 10%;">글쓴이</th>
+        <th style="width: 28%;">내용</th>        
+        <th style="width: 13%;">등록일</th>        
+        <th style="width: 7%;">노출여부</th>
+        <th style="width: 10%;">action</th>
+        <th style="width: 10%;">action</th>
+        
+        
+      </tr>
+    </thead>
+  
+    <tbody>    
+      {% for ps in posts %}
+      <tr style="height: 5rem;">
+        <td>{{ ps.pk }}</td>                
+        <td><a href="{% url 'article-detail' ps.pk %}">{{ ps.title|truncatechars:10 }}</a></td>        
+        <td><img src="{{ ps.image.url}}" alt="" style="width: 70px;height: 50px;"> </td>
+        <td>{{ ps.author }}</td>
+        <td>{{ ps.body|truncatechars:15 }}</td>                
+        <td>{{ ps.created|date:'Y-m-d H:i' }}</td>
+        
+        <td>{% if user.is_superuser %} {{ ps.status }} {% endif %}</td>
+                
+        
+        <td>{% if user.is_superuser %}<a href="{% url 'update_post' ps.pk %}" class="btn3">수정</a>{% endif %}</td>       
+        
+        
+        <td>          
+          {% if user.is_superuser %}
+          <a href="{% url 'delete_post' ps.pk %}" class="btn3">삭제</a>
+          {% endif %}
+        </td>
+        
+        
+        
+
+      </tr>
+      {% endfor %}
+      <tbody>    
+  </table> 
+
+  <!-- pagination -->
+  
+
+
+  <div>
+    
+
+      
+
+  </div>
+
+  <div>
+
+
+
+    
+	
+</section>
+
+<section class="s2">
+  <div> {{ error }} </div>
+  <br>
+      
+      <form id="searchForm" action="{% url 'posts' %}" method="get" class="contact-form"style="width: 24rem;s">      
+      <input type="text" class="input-field" id="formInput#search" name="search_query"
+      value="{{search_query}}">
+      <button type="submit" class="btn2" style="margin: 15px 0 0px 0px;background-color: #efefef;">검색</button>
+      </form>
+    <!-- </div> -->
+
+    {% if posts.has_other_pages %}
+    <div class="center">
+    <div class="pagination">
+      {% if posts.has_previous %}
+      <a href="?page={{posts.previous_page_number}}" class="page-link" data-page="{{posts.previous_page_number}}"><strong>&#10094; Prev</strong></a>
+      {% endif %}
+
+      {% for page in custom_range %}
+      <!-- ?page=2 이고 2를 나타냄 -->
+      {% if page == posts.number %} 
+
+      <a href="?page={{page}}" class="page-link" data-page="{{page}}"><strong>{{page}}</strong></a>
+      {% else %}
+
+      <a href="?page={{page}}" class="page-link" data-page="{{page}}">{{page}}</a>
+      {% endif %}
+      {% endfor %}
+
+
+      {% if posts.has_next %}
+      <a href="?page={{posts.next_page_number}}" class="page-link" data-page="{{posts.next_page_number}}"><strong>&#10095; Next</strong></a>
+      {% endif %}
+    </div>
+    </div>
+    {% endif %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </section>
+
+
+  
+
+  <!-- https://www.youtube.com/watch?v=l1w1-c7NI-E | Python Django - Search + Pagination in Website 참고해서 만듬 -->
+  <!-- 동영상 강의에 나온 paginate.html과 posts.html 파일들 나누어서 정리하는 것과, main.js 생성하는 건 아직 안했음. -->
+  <!-- search_query 검색하고 page 클릭한 후, 글읽기로 들어갔다가 뒤로 나오면 기존 검색해 놓은 페이지로 가는 부분
+    <a class="btn" onclick="history.back()">Back</a> 로 보완완료 -->
+  <!-- 이전 페이지 를 기억할 수 있도록 한 것 -->
+<script type="text/javascript">
+	let searchForm = document.getElementById('searchForm')
+	let pageLinks = document.getElementsByClassName('page-link')
+
+	if(searchForm) {    
+      for(let i=0; pageLinks.length > i; i++){
+        pageLinks[i].addEventListener('click', function(e) {
+          e.preventDefault()
+
+          let page = this.dataset.page
+          console.log('PAGE', page)
+
+          searchForm.innerHTML += `<input value="${page}" name="page" hidden >`
+          searchForm.submit()
+        })
+    }
+  
+  }
+
+	
+</script>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

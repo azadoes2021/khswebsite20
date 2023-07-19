@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+{% block content %}
+
+<br/>
+<br/>
+<br/>
+<h1>세금 News & 정보 글작성하기</h1>
+
+
+<section class="s2">
+  <div> {{ error }} </div>
+  
+  <!-- widget_tweaks 사용하여 템플릿을 만들었음. [How to] Django로 블로그 만들어보기 [widget tweaks] https://www.youtube.com/watch?v=jS4fLseF_cs -->
+  <!-- [중요] enctype="multipart/form-data" 넣어주어야 프론트엔드 통해서 사진 업로드 가능 -->
+      {% load widget_tweaks %}
+      
+      <form action="" method="post" enctype="multipart/form-data" class="contact-form">      
+      {% csrf_token %}
+
+      {{ form.media }}
+      {% for field in form.visible_fields %}
+      <!-- <p>{{ field.label }}</p><br/> -->
+      <label>{{ field.label }}</label><br/>      
+      {{field|add_class:'input-field'}} 
+      <br><br>    
+      {% endfor %}    
+      <button type="submit" class="btn">작성완료</button>
+      </form>
+    </div>
+  </section>
+  
+
+
+  
+    
+
+{% endblock %}
+
+
+
+
+<!-- <section class="s2">  
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

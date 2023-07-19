@@ -1,0 +1,91 @@
+{% load static %}
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Hi{% endblock %}</title>
+
+
+
+
+    <!-- 다음 html에 적용할 css 파일 경로 넣는 곳 -->
+    {% block static %} 
+    {% endblock %} 
+
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/default.css' %}"> -->
+
+
+    <!-- <link rel="stylesheet" href="{% static 'css/login.css' %}"> -->
+    <!-- <link rel="stylesheet" href="{% static 'css/login.css' %}">     -->
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+    <!-- box icons -->
+    <!-- <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"> -->
+
+    {% block header %}
+    {% endblock %}
+  </head>
+  <style>
+    .center {
+  text-align: center;
+  font-family: monospace;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: #000000;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .5s;
+  border: 1px solid #DDD;
+  margin: 0 4px;
+  font-size: 20px;
+}
+
+.pagination a.active {
+  background-color: #0096FF;
+  color: #FFFFFF;
+  border: 1px solid #0096FF;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #DDD;
+}
+
+  </style>
+<body>
+  <!-- navbar  -->
+  <header>
+    <a href="{% url 'posts' %}" class="logo"><img src="{% static 'images/logo.png' %}" alt=""></a>
+    
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <ul class="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="{% url 'add_post' %}">Add Post</a></li>
+      <li><a href="{% url 'customregi' %}">Register</a></li>
+      <li><a href="{% url 'customlogin' %}">Login</a></li>      
+      {% if user.is_authenticated %}
+      <li><a href="{% url 'logout' %}">Logout</a></li>
+      {% endif %}
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#delivery">Delivery</a></li>
+      <li><a href="#app">App</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+  </header>
+    {% block content %}
+    {% endblock %}
+
+    
+    
+  
+</body>
+</html>

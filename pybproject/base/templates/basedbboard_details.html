@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block title %}{{ post.title_tag }}{% endblock %}
+{% block content %}
+<br/>
+<section class="s2">
+<h1>홈페이지 DB [ {{ post.pk }} ]번 문의글</h1>
+<hr style="margin: 0 0 0 0;"  >
+
+
+
+<small>
+
+  
+  <!-- DateTimeField 사용하여 년/월/일 시간/분 나오게 -->
+  <!-- {{post.created|date:'Y-m-d H:i'}} -->
+  <!-- DateTimeField 사용하여 년/월/일 나오게 -->
+  <!-- By: {{ post.author.first_name }} {{ post.author.last_name}} - {{post.post_date|date:'Y-m-d'}} -->
+</small><br/>
+
+
+
+
+등록일: {{post.created|date:'Y-m-d H:i'}}
+<br/>
+
+성함: {{post.name}}    <!-- 성함: {{ post. }} 전화번호: {{ post. }} -->
+<br>
+전화번호: {{post.number}}
+<br><br>
+<br>
+{{ post.body }}
+
+
+
+<br/><br/>
+<br/><br/>
+<!-- <input type="button" value="Go back!" onclick="history.back()"> -->
+<a class="btn" onclick="history.back()">뒤로가기</a>
+
+<a href="{% url 'basedbboard' %}" class="btn">목록</a>
+
+
+{% if user.is_superuser %}
+<a href="{% url 'update_basedb' post.pk %}" class="btn">업데이트</a>
+<a href="{% url 'delete_basedb' post.pk %}" class="btn">삭제</a>
+{% endif %}
+
+<br/><br/>
+<h3>comment</h3>
+<!-- List of comments -->
+ {% if comments %}
+ <div class="">
+   <div class="">
+     Comment{{ comments.count|pluralize }}
+     <span class="">{{ comments.count }}</span>
+   </div>
+   <br>
+   {% for comment in comments %}
+   <div class="">
+     <div class="">
+       <div class="">
+         <div class="">
+           <!-- <img src="" alt=""> -->
+           <!-- <strong>{{ comment.user }} : {{ comment.id }} : {{ comment.content }} [ {{ comment.created|date:'Y-m-d H:i'}} ]</strong> -->
+           <strong>{{ comment.user }} </strong>
+           <br>
+           <strong>{{ comment.content }}</strong>
+           <br>
+           <strong>[ {{ comment.created|date:'Y-m-d H:i'}} ]</strong>
+           <span>
+           {% if request.user == comment.user %}
+         <a href="{% url 'comment_delete' comment.id  %}" class="btn3" >삭제</a>
+         {% endif %}
+        </span>
+         </div>
+         <br>
+         <!-- {% if request.user == comment.user %}
+         <a href="{% url 'comment_delete' comment.id  %}" class="btn" >삭제</a>
+         {% endif %} -->
+         <div class="">
+           <p class=""></p>
+           <p class=""><small></small></p>
+         </div>
+       </div>
+     </div>
+   </div>
+   
+   {% endfor %}
+ </div>
+ {% endif %}
+
+
+<!-- Form to leave comment -->
+<div class="">
+  <div class="">
+    <!-- <h3>leave comments</h3> -->
+    <form method='POST'>
+      {% csrf_token %}
+      <!-- <div class="">
+        <span class=""></span>{{ form.user.label_tag }}
+        <input type="" class="{% if form.user.errors %}is-invalid{% endif %}" id="id_user"
+          name="user" value="{{ form.user.value|default:'' }}">
+      </div> -->
+      
+      <div class="">
+        <!-- <span class=""></span>{{ form.content.label_tag }} -->
+        <!-- <textarea class="form-control {% if form.content.errors %}is-invalid{% endif %}" id="id_content"
+          name="content" rows="4">{{ form.content.value|default:'' }}</textarea> -->
+        
+          <textarea class="{% if form.content.errors %}is-invalid{% endif %}" id="id_content"
+          name="content" rows="4">{{ form.content.value|default:'' }}</textarea>
+        </div>
+        <br>
+      <button class="btn2" type="submit">comment</button>
+    </form>
+  </div>
+</div>
+
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+</section>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

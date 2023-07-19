@@ -1,0 +1,281 @@
+{% extends 'header02.html' %}
+{% load humanize %}
+{% load static %}
+
+{% block content %}
+
+  
+
+
+
+<!-- home section 시작 -->
+<style>
+
+  /* a:visited {
+  color : white;
+  } */
+  strong {
+      font-weight: 700;
+  }
+  .subtitle{
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin: 0;
+    color: #1792d2;
+    letter-spacing: 0.05em;
+    font-family: 'Ubuntu Bold', sans-serif;
+  }
+  .article-title {
+    padding: 22px 0 0 0;
+    /* padding: 1.5rem 0; */
+      font-size: 3.5rem;
+  }
+  
+  .article-read-more,
+  .article-info {
+      /* font-size: .875rem; */
+      font-size: 2rem;
+      padding: 20px 0 20px 0;
+  }
+  
+  .article-read-more {
+      color: #1792d2;
+      text-decoration: none;
+      font-weight: 700;
+  }
+  .article-read-more:hover,
+  .article-read-more:focus {
+      color: #143774;
+      text-decoration: underline;
+  }
+  .article-info {
+      /* margin: 2rem 0; */
+      color: gray;
+      padding: 20px 0 20px 0;
+    }
+  
+  .container-flex{
+    max-width: 51vw;
+    /* padding: 2rem 20%; */
+    margin: 0 auto;
+    /* display: flex; */
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+ 
+  .article-featured img{
+    /* max-width: 100%; */
+    width: 100%;
+    display: block;
+  }
+  
+  .articlemain{
+    /* max-width: 75%; */
+    max-width: 100%;
+  }
+
+  
+  .article-body{
+    font-weight: 300;
+    /* font-size: 2rem; */
+    font-size: 2.4rem;
+    width: 100%;
+    text-align: justify;
+  }
+  
+  @media (max-width:1050px){
+    
+    .container-flex{
+      max-width: 82vw;
+      flex-direction: column;
+    }
+    .site-title, .subtitle{
+      width: 100%;
+    }
+    .articlemain{
+      max-width: 100%;
+    }
+    /* .sidebar{
+      max-width: 100%;
+    } */
+    
+  }
+  @media (max-width: 500px){
+    /* nav ul{
+      display: flex;
+      flex-direction: column;
+    }
+    nav li{
+      margin: 0.5em 0;
+    } */
+  }
+  
+  /* articles */
+  .article-featured {
+      border-bottom: #707070 1px solid;
+      padding-bottom: 2em;
+      margin-bottom: 2em;
+  }
+  .article-recent {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2em;
+  }
+  
+  .article-recent-main {
+      order: 2;
+  }
+  
+  .article-recent-secondary {
+      order: 1;
+  }
+  
+  @media (min-width: 675px) {
+
+  .article-body{
+
+  /* font-size: 2rem; */
+  font-size: 2.4rem;
+  width: 100%;
+  text-align: justify;
+  font-weight: 300;
+  }
+  .article-recent {
+      
+    flex-direction: row;
+      justify-content: space-between;
+  }
+  
+  .article-recent-main {
+      width: 68%;
+  }
+  
+  .article-recent-secondary {
+      width: 30%;
+  }
+  }
+  
+  
+  
+  </style>
+  
+ 
+ <!-- container starts -->
+ <br><br><br><br><br><br><br>
+ 
+ <!-- <div class="container container-flex"> -->
+
+    <div class="container-flex">
+            <div class="articlemain" style="align-items: center;">
+                <article class="article-featured">
+                    <br><br>
+                    <h2 class="article-title" style="align-items: center;">문의접수가 완료되었습니다.</h2>
+                    <h2 class="article-title">최대한 빨리 답변 드리도록 하겠습니다.</h2>
+                    <h2 class="article-title">감사합니다.</h2>
+                    
+                    <br/><br/><br/><br/>
+  
+                    
+                    <a href="/#anchorcontact" class="btn">뒤로가기</a>
+                    
+                    <a href="{% url 'home' %}" class="btn">홈으로 이동</a>
+                    
+                    
+                    
+                    
+                    <br/><br/><br/><br/>  
+                    <!-- <a href="#" class="article-read-more">CONTINUE READING</a> -->
+                </article>              
+              </div>
+            
+            
+            
+        </div>
+    <!-- container ends -->
+ <!-- <div class="workbottom" style="height: 10rem;background-color: #333;"><h1></h1></div> -->
+ <!-- <div class="workbottom" style="height: 10rem;background-color: #3a8de0;"><h1></h1></div> -->
+ <!-- <footer class="flex-rw">
+ 
+   <ul class="footer-list-top">
+       <li><h4 class="footer-list-header"></h4></li>        
+       <li><h4 class="footer-list-header"></h4></li>        
+       <li><span class="generic-anchor footer-list-anchor" itemprop="significantLink">사업자등록번호 : 413-10-93780</span></li>
+       <li><span class="generic-anchor footer-list-anchor" itemprop="significantLink">서울특별시 강동구 양재대로 1365(심포니타워 3층)
+ 
+       </span></li>      
+   </ul>
+   <ul class="footer-list-top">
+       <li><h4 class="footer-list-header"></h4></li>  
+       <li><h4 class="footer-list-header"></h4></li>        
+       <li><span class="generic-anchor footer-list-anchor" itemprop="significantLink">전화번호 010-4015-0127</span></li>
+       <li><span class="generic-anchor footer-list-anchor" itemprop="significantLink" style="text-transform: lowercase;">이메일 : kimtaxhelp  @naver.com</a></li>      
+   </ul>
+   
+   <ul class="footer-list-top">
+       <li id='help'><h4 class="footer-list-header"></h4></li>
+       <li><h4 class="footer-list-header"></h4></li>        
+       <li><span class="footer-social-overlap footer-social-icons-wrapper" style="align-items: center;">
+
+           <a href="https://blog.naver.com/kimtaxhelp"><span id="naverbloglogo"><img src="{% static 'images/naverbloglogo.png' %}" alt="" style="width: 31px;margin: -10.6px 6px;" >네이버블로그</span></a>
+           
+           <br>
+           
+          
+           </span></li>
+           <li></li>
+       
+     </ul>
+      
+ </footer>
+ 
+ <section id="footer">
+ 
+   
+   <br>
+   <h1>&copy; copyright @ 2023 by <span>기세세무회계</span></h1>
+   <br>
+   
+   
+ 
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ </section> -->
+ 
+ 
+ 
+ 
+ <!-- <div style="position:fixed; bottom:0; right:0; left:0; z-index:90;"> -->
+   <div style="position:fixed; bottom:0; left:0; z-index:90; width:50%; height:50px; background:#ffe040; text-align:center; box-sizing:border-box; ">
+       <a href="http://pf.kakao.com/_excRcxj/chat" target="_blank" style="color:#43272b;">
+           <h6 class="bottommenuh6" style="">
+               <img style="width: 1.8rem;" src="{% static 'images/kakaoicons.png' %}" > 카카오톡상담
+           </h6>
+       </a>
+   </div>
+   <div style="position:fixed; bottom:0; right:0; z-index:90; width:50%; height:50px; background:#041f3c; text-align:center; box-sizing:border-box;">
+       <a href="tel:010-4015-0127" style="color:#fff;">
+           <h6 class="bottommenuh6" style="">
+               <img style="width: 1.5rem;" src="{% static 'images/phone.png' %}" > 전화상담
+           </h6>
+       </a>
+   </div>
+   <!-- </div> -->
+
+<!-- jquery/js part -->
+
+
+<script>
+
+
+  
+
+    
+
+
+
+
+{% endblock %}

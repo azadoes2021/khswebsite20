@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>기세 세무회계</title>
+    <link rel="stylesheet" href="{% static 'css/style02.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.css' %}">    
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{% static 'css/owl.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/144304435e.js" crossorigin="anonymous"></script>
+  
+  
+  
+  
+    <!-- box icons -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+    {% block header %}
+    {% endblock %}
+    <body> 
+
+
+
+      <!-- navbar  -->
+      <!-- header section 시작 -->
+    
+    <header>
+      <div><a href="{% url 'home' %}" class="logo"><img src="{% static 'images/fulllogo4.png' %}" alt=""></a></div>  
+      <a href="{% url 'home' %}" id="menu-blog" style="text-align: center;"><img src="../images/naverbloglogo.png" alt="" ></a>
+      <input type="checkbox" id="menu-bar">
+      <label for="menu-bar" class="fas fa-bars"></label>
+      
+      
+      <nav class="navbar">
+        <ul>
+          <li class="boderline"><a href="{% url 'home' %}" style="text-align: center;">홈</a></li>
+          <li class="boderline"><a href="http://127.0.0.1:8000/#anchorcareer" style="text-align: center;">세무사소개</a></li>
+          <li class="boderline"><a href="http://127.0.0.1:8000/#anchoretc" style="text-align: center;">회사소개</a></li>
+          <li class="boderline"><a href="http://127.0.0.1:8000/#work" style="text-align: center;">업무</a></li>
+          <li class="boderline"><a href="http://127.0.0.1:8000/#anchorblog" style="text-align: center;">세금 News & 정보</a></li>
+          <li class="boderline"><a href="http://127.0.0.1:8000/#anchorcontact" style="text-align: center;">문의하기</a></li>
+          <li class="boderline"><a href="http://127.0.0.1:8000/#mapssec" style="text-align: center;">오시는길</a></li>
+          <li class="boderline"><a href="https://blog.naver.com/kimtaxhelp" style="text-align: center;"><img src="../images/naverbloglogo.png" alt="" style="width: 31px;margin: 0px 0px;"></a></li>
+          {% if not user.is_authenticated %}
+          <li class="boderline"><a href="{% url 'customlogin' %}" style="text-align: center;">관리자 로그인</a></li>
+          {% endif %}
+          {% if user.is_authenticated %}
+          <li class="boderline"><a href="{% url 'logout' %}" style="text-align: center;">로그아웃</a></li>
+          {% endif %}
+          
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- header section 끝 -->
+
+    {% block content %}
+    {% endblock %}
+
+
+<!-- jquery/js part -->
+
+<script>
+
+
+
+  var swiper = new Swiper(".mySwiper", {
+          // spaceBetween: 30,
+          slidesPerView: 2,
+          // centeredSlides: true,
+          centeredSlides: false,
+          autoplay: {
+            delay: 2500,
+          //   disableOnInteraction: false,
+          disableOnInteraction: true,
+          },
+          // pagination: {
+          //   el: ".swiper-pagination",
+          //   clickable: true,
+          // },
+          // navigation: {
+          //   nextEl: ".swiper-button-next",
+          //   prevEl: ".swiper-button-prev",
+          // },
+          breakpoints: {
+        768: {
+          slidesPerView: 2
+        },
+        1200: {
+          slidesPerView: 4
+        }
+      },
+        });
+  
+  
+  
+  $(document).ready(function(){
+  
+      $('.fa-bars').click(function(){
+          $(this).toggleClass('fa-times');        
+      });
+  
+      $('nav ul li a').click(function(){
+          $('.fa-bars').removeClass('fa-times');        
+          $("#menu-bar").prop("checked", false);    
+      });
+  
+      $(window).scroll(function(){
+          if($(window).scrollTop() < 20){
+              $('header').css('box-shadow','none');
+          }else{
+              $('header').css('box-shadow','0 .2rem .5rem #333');
+          }
+      });
+  
+      
+  
+  });
+  
+  
+  // 블로그 롤링           $(".owl-blog, .owl-banner").owlCarousel({
+  $(document).ready(function(){
+      $(".owl-blog").owlCarousel({
+                nav:true,
+              //   navContainer: '.owl-nav',
+                navText: ["<img src='https://raw.githubusercontent.com/Ruben-Vardanyan/Carousel/main/arrL.png'>","<img src='https://raw.githubusercontent.com/Ruben-Vardanyan/Carousel/main/arrR.png'>"],
+                rtl: false,
+                loop:true,
+              //   margin:10,
+              //   stagePadding:50,
+                autoplay:true,
+                autoplayTimeout:3000,
+                // autoplayHoverPause:true,
+  
+                dots: true,
+                dotsEach:true,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        // nav:true
+                    },
+                    600:{
+                        items:1,
+                    },
+                    900:{
+                        items:1,
+                    },
+                    1200:{
+                        items:2,
+                        // nav:true,
+                    },
+                    1600:{
+                        items:3,
+                        // nav:true,
+                    }
+                }
+            });        
+                 
+        });
+      //   배너들 롤링
+  </script>
+  <!-- <script src="/examples/scripts/script_src.js"></script> -->   
+
+
+    
+    
+  
+
+  
+  
+
+</body>
+</html>
+    <!-- 10 -->
+    
+
+
+

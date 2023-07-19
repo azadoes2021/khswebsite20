@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}Update Post{% endblock %}
+{% block content %}
+
+{% if user.is_authenticated %}
+<h1>세금 News & 정보 수정</h1>
+<h1>세금 News & 정보 [ {{ blog.pk }} ]번 글을 수정 하시겠습니까? </h1>
+
+
+
+<section class="s2">
+  <div> {{ error }} </div>
+      {% load widget_tweaks %}
+      <form action="" method="post" class="contact-form">      
+      {% csrf_token %}
+      {{ form.media }}
+      {% for field in form.visible_fields %}
+      <!-- <p>{{ field.label }}</p><br/> -->
+      <label>{{ field.label }}</label><br/>      
+      {{field|add_class:'input-field'}} 
+      <br><br>    
+      {% endfor %}    
+      <button type="submit" class="btn" >수정완료</button>
+      </form>
+    </div>
+  </section>
+  
+
+
+{% else %}
+  <p style="margin-top: 15rem;">글을 수정하려면 로그인이 필요합니다.</p>
+{% endif %}  
+    
+
+{% endblock %}
+
+
+
+
+<!-- <section class="s2">  
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

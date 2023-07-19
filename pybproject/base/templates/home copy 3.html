@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>기세 세무회계</title>
+    <link rel="stylesheet" href="{% static 'css/style02.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/default.css' %}"> -->
+    <!-- <link rel="stylesheet" href="{% static 'css/login.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/owl.css' %}">    
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="css/owl.css" /> -->
+    <link rel="stylesheet" href="{% static 'css/owl.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/144304435e.js" crossorigin="anonymous"></script>
+  
+  
+  
+  
+    <!-- box icons -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    {% block header %}
+    {% endblock %}
+  </head>
+  <style>
+    /* .center {
+  text-align: center;
+  font-family: monospace;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: #000000;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .5s;
+  border: 1px solid #DDD;
+  margin: 0 4px;
+  font-size: 20px;
+}
+
+.pagination a.active {
+  background-color: #0096FF;
+  color: #FFFFFF;
+  border: 1px solid #0096FF;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #DDD;
+} */
+
+  </style>
+<body>
+  <!-- navbar  -->
+  <!-- header section 시작 -->
+
+<header>
+  <!-- <a href="#" class="logo"><img src="" alt="">logo</a>  src="{% static 'images/Dennis.jpg' %}" -->
+  <div><a href="#" class="logo"><img src="{% static 'images/fulllogo4.png' %}" alt=""></a></div>  
+  <a href="#" id="menu-blog" style="text-align: center;"><img src="images/naverbloglogo.png" alt="" ></a>
+  <input type="checkbox" id="menu-bar">
+  <label for="menu-bar" class="fas fa-bars"></label>
+  
+  
+  <nav class="navbar">
+    <ul>
+      <li class="boderline"><a href="#home" style="text-align: center;">홈</a></li>
+      <li class="boderline"><a href="#anchorcareer" style="text-align: center;">세무사소개</a></li>
+      <li class="boderline"><a href="#anchoretc" style="text-align: center;">회사소개</a></li>
+      <!-- <li class="boderline"><a href="#skill" style="text-align: center;">스킬</a></li> -->
+      <li class="boderline"><a href="#work" style="text-align: center;">업무</a></li>
+      <li class="boderline"><a href="#anchorblog" style="text-align: center;">세금 News & 정보</a></li>
+      <li class="boderline"><a href="#anchorcontact" style="text-align: center;">문의하기</a></li>
+      <li class="boderline"><a href="#mapssec" style="text-align: center;">오시는길</a></li>
+      <li class="boderline"><a href="#" style="text-align: center;"><img src="images/naverbloglogo.png" alt="" style="width: 31px;margin: 0px 0px;"></a></li>
+      <!-- <li class="boderline boderlinebottom"><a href="#ask" style="text-align: center;">회원가입</a></li> -->
+      
+    </ul>
+  </nav>
+</header>
+
+<!-- header section 끝 -->
+
+<!-- home section 시작 -->
+
+<section id="home">
+  
+  <div class="content">
+   <br>
+   <h1><span style="color: #3A8DFD;">안녕하세요,</span> <br>
+       <span>기분나쁜세금 no!</span>
+ 
+       <!-- 기세세무회계 <span>김형석</span>입니다. -->
+   </h1>
+ 
+   <h1><span style="color: #3A8DFD;">최적의 절세안</span><span>으로</span><br>
+   <span>기분좋게 세금을 아껴드립니다.</span>
+ 
+       <!-- 기분좋게 <span>세금을 아껴드립니다</span> -->
+   </h1>
+ 
+   <!-- <div class="inputBox">
+       <h3>상담문의 : 핸드폰번호</h3>
+       <input type="email">
+   </div> -->
+ 
+ 
+   <!-- <a href="#about"><button>기세세무회계 소개</button></a> -->
+   <a href="#anchorcontact"><button>무료상담문의</button></a>
+   <a href="#anchorcontact"><button>세금환급안내</button></a>
+ 
+   <div class="icons">
+       <!-- <a href="#" class="fab fa-facebook-square"></a>
+       <a href="#" class="fab fa-twitter-square"></a>
+       <a href="#" class="fab fa-instagram-square"></a>
+       <a href="#" class="fab fa-linkedin"></a> -->
+   </div>
+ 
+  </div> 
+ 
+  <div class="image">
+      <img src="{% static 'images/profile000002.png' %}" alt="">
+      
+  </div>
+ 
+ </section>
+ 
+ <!-- home section 끝 -->
+ 
+ <!-- career section 시작 -->
+ 
+ <section id="anchorcareer">
+   
+   <h1></h1>
+   <!-- <br> -->
+   <h1>세무사소개</h1>    
+   
+ </section>  
+ 
+ 
+ <section id="career">
+   
+   <div class="image careerdesktop">
+ 
+   
+       <img src="{% static 'images/profile000004.png' %}" alt="">
+       
+   </div>
+   
+   
+   
+   <div class="content">
+    <br>
+    
+ 
+    <h3>
+        <span style="color: #0296dd;" >기세세무회계</span><span> 대표 세무사 </span>
+ 
+        <!-- 기세세무회계 <span>김형석</span>입니다. -->
+    </h3>
+    <h3>
+       김형석입니다.
+    </h3>
+ 
+    <!-- <h1>최적의 절세안으로<br>
+    기분좋게 세금을 아껴드립니다. -->
+ 
+        <!-- 기분좋게 <span>세금을 아껴드립니다</span> -->
+    </h1>
+    
+    <h2>약력</h2>
+   <p>울산 학성고등학교</p>
+   <p>중앙대학교 광고홍보학과</p>
+   <p>KT&G 전략기획본부</p>
+   <p>나이스택스</p>
+   <p>세무그룹 서로</p>
+   <p>현 기세세무회계 대표세무사</p>
+    <!-- <div class="inputBox">
+        <h3>상담문의 : 핸드폰번호</h3>
+        <input type="email">
+    </div> -->
+ 
+ 
+    <!-- <a href="#about"><button>기세세무회계 소개</button></a> -->
+    <!-- <a href="#anchorcontact"><button>무료상담문의</button></a>
+    <a href="#anchorcontact"><button>세금환급안내</button></a> -->
+ 
+    <div class="icons">
+        <!-- <a href="#" class="fab fa-facebook-square"></a>
+        <a href="#" class="fab fa-twitter-square"></a>
+        <a href="#" class="fab fa-instagram-square"></a>
+        <a href="#" class="fab fa-linkedin"></a> -->
+    </div>
+ 
+   </div>   
+   <div class="image careermobile">
+ 
+   
+       <img src="{% static 'images/profile000004.png' %}" alt="">
+       
+   </div>
+ </section>
+ <!-- career section 시작 -->
+ 
+ <section id="anchoretc">
+   
+   <h1></h1>
+   <!-- <br> -->
+   <h1>회사소개</h1>    
+   
+ </section>  
+ 
+ <!-- career section 끝 -->
+ 
+ <section id="etc">
+ 
+   
+   <div class="image etcdesktop">
+       <img src="{% static 'images/taxandpc.jpg' %}" alt="">
+       
+   </div>
+   
+   
+   
+   <div class="content">
+    <!-- <br> -->
+    
+    
+    
+    <h3>
+       <span style="color: #0296dd;">기세 세무회계</span>와 성공적인 
+       비즈니스를 함께 하시기바랍니다.
+ 
+        <!-- 기세세무회계 <span>김형석</span>입니다. -->
+    </h3>
+    <h3>
+       
+    </h3>
+ 
+    <!-- <h1>최적의 절세안으로<br>
+    기분좋게 세금을 아껴드립니다. -->
+ 
+        <!-- 기분좋게 <span>세금을 아껴드립니다</span> -->
+    </h1>
+    
+    <h2>고객만족을 최우선의 
+       가치로<br>  
+       거래처별 1:1 맞춤세무서비스를 제공하여<br>
+       불필요한 세금
+       부담을 줄여드리는<br> 든든한 조력자가 되겠습니다.
+       </h2>
+   
+    
+ 
+ 
+    
+ 
+    <div class="icons">
+        <!-- <a href="#" class="fab fa-facebook-square"></a>
+        <a href="#" class="fab fa-twitter-square"></a>
+        <a href="#" class="fab fa-instagram-square"></a>
+        <a href="#" class="fab fa-linkedin"></a> -->
+    </div>
+    
+   </div> 
+   
+   <div class="image etcmobile">
+       <img src="{% static 'images/taxandpc.jpg' %}" alt="">
+       
+   </div>
+ 
+   
+ 
+ </section>
+ 
+ <!-- career section 끝 --> 
+ 
+   <div style="height: 10rem;background-color: #f8f9fa;"><h1></h1></div>
+ <!-- work section 시작  -->
+ 
+ <section id="work">
+ <h1></h1>
+ <h1>업무</h1>
+ <div class="box-container">
+ <div class="box" style="text-align: center;font-size: 2rem;">
+   <div style="text-align: center;font-size: 2rem;display: inline-flex;align-items: center;">
+       <div style="padding: 2rem 0rem 0rem 0rem;">
+           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);transform: ;msFilter:;"><path d="m7 17.013 4.413-.015 9.632-9.54c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.756-.756-2.075-.752-2.825-.003L7 12.583v4.43zM18.045 4.458l1.589 1.583-1.597 1.582-1.586-1.585 1.594-1.58zM9 13.417l6.03-5.973 1.586 1.586-6.029 5.971L9 15.006v-1.589z"></path><path d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2z"></path></svg>
+           <!-- <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255)ㅊ
+               ;transform: ;msFilter:;"><path d="M12 15c-1.84 0-2-.86-2-1H8c0 .92.66 2.55 3 2.92V18h2v-1.08c2-.34 3-1.63 3-2.92 0-1.12-.52-3-4-3-2 0-2-.63-2-1s.7-1 2-1 1.39.64 1.4 1h2A3 3 0 0 0 13 7.12V6h-2v1.09C9 7.42 8 8.71 8 10c0 1.12.52 3 4 3 2 0 2 .68 2 1s-.62 1-2 1z"></path><path d="M5 2H2v2h2v17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4h2V2H5zm13 18H6V4h12z"></path></svg> -->
+       </div>
+       <div style="padding: 2rem 4rem 0rem 0rem">
+       <h2>세무기장서비스</h2>
+       </div>
+   </div>
+   <p class="workp" style="padding: 1.5rem;">
+       - 기장대리 / 신고대리<br>
+       - 종합소득세 / 법인세 / 부가가치세<br>
+       - 4대보험 및 급여신고<br>
+ 
+       <!-- 부가가치세 예정 및 확정신고 대행<br>
+       업무 종합소득세 확정신고 대행 및<br>
+       세무조정 업무 성실신고대상자의<br> 
+       성실신고확인자 위임 및 세무조정,<br> 
+       신고업무, 법인세 세무조정 및<br>
+       신고 대행 업무 -->
+   </p>
+ </div>
+ 
+ <div class="box" style="text-align: center;font-size: 2rem;">
+   <div style="text-align: center;font-size: 2rem;display: inline-flex;align-items: center;">
+       <div style="padding: 2rem 0rem 0rem 0rem;">
+           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);transform: ;msFilter:;"><path d="M16 14h.5c.827 0 1.5-.673 1.5-1.5v-9c0-.827-.673-1.5-1.5-1.5h-13C2.673 2 2 2.673 2 3.5V18l5.333-4H16zm-9.333-2L4 14V4h12v8H6.667z"></path><path d="M20.5 8H20v6.001c0 1.1-.893 1.993-1.99 1.999H8v.5c0 .827.673 1.5 1.5 1.5h7.167L22 22V9.5c0-.827-.673-1.5-1.5-1.5z"></path></svg>
+       </div>
+       <div style="padding: 2rem 4rem 0rem 0rem">
+       <h2>세금 컨설팅</h2>
+       </div>
+   </div>
+   <p class="workp" style="padding: 1.5rem;">
+       - 세무상담 & 경영자문<br>
+       - 사업운영 단계별 절세 컨설팅<br>
+       - 창업지원 및 법인전환<br>
+       - 정책자금안내<br> 
+   </p>
+ </div>
+ 
+ <div class="box" style="text-align: center;font-size: 2rem;">
+   <div style="text-align: center;font-size: 2rem;display: inline-flex;align-items: center;">
+       <div style="padding: 2rem 0rem 0rem 0rem;">
+           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);transform: ;msFilter:;"><path d="M12 15c-1.84 0-2-.86-2-1H8c0 .92.66 2.55 3 2.92V18h2v-1.08c2-.34 3-1.63 3-2.92 0-1.12-.52-3-4-3-2 0-2-.63-2-1s.7-1 2-1 1.39.64 1.4 1h2A3 3 0 0 0 13 7.12V6h-2v1.09C9 7.42 8 8.71 8 10c0 1.12.52 3 4 3 2 0 2 .68 2 1s-.62 1-2 1z"></path><path d="M5 2H2v2h2v17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4h2V2H5zm13 18H6V4h12z"></path></svg>
+       </div>
+       <div style="padding: 2rem 4rem 0rem 0rem">
+       <h2>재산세제 신고</h2>
+       </div>
+   </div>
+   <p class="workp" style="padding: 1.5rem;">
+       - 양도 / 상속 / 증여세<br>
+       - 비상장 주식평가<br>
+       - 상속 증여 컨설팅 및 사후관리<br>
+ 
+       
+   </p>
+ </div>
+ 
+ <div class="box" style="text-align: center;font-size: 2rem;">
+   <div style="text-align: center;font-size: 2rem;display: inline-flex;align-items: center;">
+       <div style="padding: 2rem 0rem 0rem 0rem;">
+           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);transform: ;msFilter:;"><path d="M11 7h2v7h-2zm0 8h2v2h-2z"></path><path d="m21.707 7.293-5-5A.996.996 0 0 0 16 2H8a.996.996 0 0 0-.707.293l-5 5A.996.996 0 0 0 2 8v8c0 .266.105.52.293.707l5 5A.996.996 0 0 0 8 22h8c.266 0 .52-.105.707-.293l5-5A.996.996 0 0 0 22 16V8a.996.996 0 0 0-.293-.707zM20 15.586 15.586 20H8.414L4 15.586V8.414L8.414 4h7.172L20 8.414v7.172z"></path></svg>
+       </div>
+       <div style="padding: 2rem 4rem 0rem 0rem">
+       <h2> 경정청구 및 조세불복</h2>
+       </div>
+   </div>
+   <p class="workp" style="padding: 1.5rem;">
+       - 세무조사대응<br>
+       - 벤처기업/창업기업 조세감면<br>
+       <!-- - 창업지원 및 법인전환<br> -->
+       <!-- - 정책자금안내<br>  -->
+   </p>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ </div>
+ <!-- <div class="workbottom" style="height: 10rem;background-color: #3a8de0;"><h1></h1></div>
+ <div class="workbottom" style="height: 10rem;background-color: #3a8de0;"><h1></h1></div> -->
+ 
+ <div style="height: 10rem;background-color: #3a8de0;"><h1></h1></div>
+ </section>
+ 
+ <!-- work section 끝  -->
+ 
+ <!-- blog section 시작 -->
+ <!-- <div style="height: 10rem;background-color: #f8f9fa;"><h1></h1></div> -->
+ <!-- <br style="background-color: #f8f9fa;">
+ <br style="background-color: #f8f9fa;">
+ <br style="background-color: #f8f9fa;">
+ <br style="background-color: #f8f9fa;"> -->
+ <section id="anchorblog">
+   
+   <h1></h1>
+   <!-- <br> -->
+   <h1>세금 News & 정보</h1>    
+   
+ </section>  
+ <section id="blog">
+   
+  <div class="box-container"> 
+    <!-- 롤링 -->
+   <div class="owl-blog owl-carousel owl-theme owl-loaded" id="owlblog">
+ 
+       <div class="owl-stage-outer">
+ 
+           <div class="owl-stage">
+ 
+               <div class="owl-item" style="background: #f8f9fa; ">
+                 <!-- 첫번째  -->
+                 
+                 <div class="box">
+                   <div class="image">
+                       <img src="{% static 'images/profile.jpg' %}" alt="">
+                   </div>
+                   <div class="content">
+                       <div class="icons">
+                           <a href="#"><i class="fas fa-clock"></i>2023/06/02</a>
+                           <a href="#"><i class="fas fa-user"></i>관리자</a>
+                       </div>
+                       <h3>자동차 보유세법</h3>
+                       <p>자동차를 보유하고 있으면 여러가지 종류의 세금이 붙게된다. </p>
+                       <div style="padding: 1rem 0rem 1rem 0rem;"><a href="#" class="btn">자세히보기</a></div>
+                   </div>
+                 </div>
+ 
+               </div>
+ 
+               <div class="owl-item" style="background: #f8f9fa; ">
+                 <!-- 두번째-->
+                 
+                 <div class="box">
+                   <div class="image">
+                       <img src="{% static 'images/car2.jpg' %}" alt="">
+                   </div>
+                   <div class="content">
+                       <div class="icons">
+                           <a href="#"><i class="fas fa-clock"></i>2023/06/02</a>
+                           <a href="#"><i class="fas fa-user"></i>관리자</a>
+                       </div>
+                       <h3>자동차 보유세법</h3>
+                       <p>자동차를 보유하고 있으면 여러가지 종류의 세금이 붙게된다. </p>
+                       <div style="padding: 1rem 0rem 1rem 0rem;"><a href="#" class="btn">자세히보기</a></div>
+                   </div>
+                 </div>
+ 
+               </div>
+ 
+               <div class="owl-item" style="background: #f8f9fa; border: white 2px;">
+               <!-- <div class="owl-item" style="border: white 2px;"> -->
+                 <!-- 세번째  -->
+                 
+                 <div class="box">
+                   <div class="image">
+                      <img src="{% static 'images/profile.jpg' %}" alt="">
+                   </div>
+                   <div class="content">
+                       <div class="icons">
+                           <a href="#"><i class="fas fa-clock"></i>2023/06/02</a>
+                           <a href="#"><i class="fas fa-user"></i>관리자</a>
+                       </div>
+                       <h3>자동차 보유세법</h3>
+                       <p>자동차를 보유하고 있으면 여러가지 종류의 세금이 붙게된다. </p>
+                       <div style="padding: 1rem 0rem 1rem 0rem;"><a href="#" class="btn">자세히보기</a></div>
+                   </div>
+                 </div>
+ 
+               </div>
+ 
+               <div class="owl-item" style="background: #f8f9fa; ">
+                 <!-- 네번째  -->
+                 
+                 <div class="box">
+                   <div class="image">
+                      <img src="{% static 'images/profile.jpg' %}" alt="">
+                   </div>
+                   <div class="content">
+                       <div class="icons">
+                           <a href="#"><i class="fas fa-clock"></i>2023/06/02</a>
+                           <a href="#"><i class="fas fa-user"></i>관리자</a>
+                       </div>
+                       <h3>자동차 보유세법</h3>
+                       <p>자동차를 보유하고 있으면 여러가지 종류의 세금이 붙게된다. </p>
+                       <div style="padding: 1rem 0rem 1rem 0rem;"><a href="#" class="btn">자세히보기</a></div>
+                   </div>
+                 </div>
+ 
+               </div>
+ 
+ 
+             </div>
+           </div>
+ 
+     </div>
+     <!-- 롤링 --> 
+ 
+ </div>
+ 
+ </section>
+ 
+ <!-- blog section 끝 -->
+ 
+ 
+ <!-- ask section 시작  -->
+ 
+ <section id="anchorcontact">
+ 
+ 
+   <h1></h1>
+   <!-- <br> -->
+   <h1>문의하기</h1>    
+   
+ </section>     
+       
+   
+ 
+   <!-- <section class="contact"> -->
+   <section class="contact" id="#contact">
+       
+   
+       <div class="row">
+   
+           <!-- <div action="">
+               <h3>get in touch</h3>
+               <input type="text" placeholder="your name" class="box">
+               <input type="number" placeholder="your number" class="box">
+               <input type="email" placeholder="your email" class="box">
+               <textarea name="" placeholder="your message" id="" cols="30" rows="10"></textarea>
+               <input type="submit" value="send message" class="btn">
+           </div> -->
+   
+           <div class="map" >
+ 
+               <h3 class="workp" style="text-align: center;font-size: 3.5rem;font-weight: 700;padding: 1.5rem;color:rgb(77, 121, 214)!important;">
+                   꼼꼼한 상담, 합리적 수수료
+                   
+               </h3>        
+               <h3 class="workp" style="padding: 1.5rem;">
+                   
+                   기세세무회계는
+ 고객을 단순 비즈니스 관계로 보지 않습니다.
+ 장기적인 파트너로서 꾸준한 사업 성장을 할 수 있도록
+ 고객의 곁에서 절세를 위한 다방면의 제안을 드리겠습니다.
+ 
+ 
+               </h3>                
+           </div>
+      {% load widget_tweaks %}
+      <form action="" method="post" class="contact-form">
+        <h3>아래사항들을 작성 후 완료버튼을 눌러주세요.</h3>                      
+      {% csrf_token %}
+
+      {% for field in form.visible_fields %}
+        
+      <!-- <p>{{ field.label }}</p><br/> -->
+      <label class="formlabels">{{ field.label }}<span style="color: red;">*</span></label><br/>      
+      {{field|add_class:'box'}} 
+      <br><br>    
+        
+      {% endfor %}  
+      
+      <!-- <label>Dbcode</label><br>       -->
+      <!-- <select name="dbcode" class="input-field" id="id_dbcode" style="display: none;">
+        <option value="db01" selected>db01</option>
+        <option value="db02">db02</option>
+        <option value="db03">db03</option> 
+      </select> -->
+      <button type="submit" class="btn">Post</button>
+      </form>
+           <!-- <div action=""></div>
+               
+           
+               
+           </div> -->
+    </div>
+       <!-- widget_tweaks 사용하여 템플릿을 만들었음. [How to] Django로 블로그 만들어보기 [widget tweaks] https://www.youtube.com/watch?v=jS4fLseF_cs -->
+      
+       <br>
+       <br>
+       <div class="icons-container">
+   
+           <div class="icons">
+               <!-- 롤링 -->   
+ 
+               <i class="fas fa-phone"></i>
+               <h3>연락처</h3>
+               <p>010-4015-0127</p>
+               
+           </div>
+   
+           <div class="icons">
+               <i class="fas fa-envelope"></i>
+               <h3>이메일</h3>
+               <p>kimtaxhelp@naver.com</p>
+               
+           </div>
+   
+           <div class="icons">
+               <i class="fas fa-map-marker-alt"></i>
+               <h3>주소</h3>
+               <p>서울특별시 강동구 양재대로 1365(심포니타워 3층)</p>
+           </div>
+   
+       </div>
+       
+   
+ </section>
+   <!-- ask section 끝  -->
+   
+ 
+ <!-- footer section starts  -->
+ 
+ <!-- 가장 큰 반응형 지도  -->
+ <!-- <div class="map-responsive">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.5038421720215!2d126.93912!3d37.519618699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9f43eb982443%3A0x2e4feed69c60d08!2z64KY7J207Iqk7YOd7Iqk!5e0!3m2!1sko!2skr!4v1687830107938!5m2!1sko!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div> -->
+ 
+ 
+ <section id="mapssec">
+ 
+ 
+   <h1></h1>
+   <!-- <br> -->
+   <h1>오시는길</h1>    
+   
+ </section>   
+ <section class="location" id="location"> 
+ 
+ 
+ <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.5038421720215!2d126.93912!3d37.519618699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9f43eb982443%3A0x2e4feed69c60d08!2z64KY7J207Iqk7YOd7Iqk!5e0!3m2!1sko!2skr!4v1687830107938!5m2!1sko!2skr" width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mappc"></iframe> -->
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12655.181361732508!2d127.12595027176748!3d37.536321418047336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357caffaba7d44c3%3A0xec421953300ab602!2z7Ius7Y-s64uI7YOA7JuM!5e0!3m2!1sko!2skr!4v1688293477614!5m2!1sko!2skr" width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mappc"></iframe>
+ 
+ 
+ <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.5038421720215!2d126.93912!3d37.519618699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9f43eb982443%3A0x2e4feed69c60d08!2z64KY7J207Iqk7YOd7Iqk!5e0!3m2!1sko!2skr!4v1687830107938!5m2!1sko!2skr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapmb"></iframe> -->
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12655.181361732508!2d127.12595027176748!3d37.536321418047336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357caffaba7d44c3%3A0xec421953300ab602!2z7Ius7Y-s64uI7YOA7JuM!5e0!3m2!1sko!2skr!4v1688293477614!5m2!1sko!2skr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapmb"></iframe>
+ 
+ </section>
+ 
+ <!-- websites section 시작  -->
+ 
+ <section id="anchorcontact">
+ 
+ 
+   <h1></h1>
+   <!-- <br> -->
+   <h1>관련사이트</h1>    
+   
+ </section>     
+       
+   
+ 
+ <!-- <section class="contact"> -->
+ <section class="" id="websites">
+       
+ <!-- 롤링 -->    
+ <div class="webbanners">
+ 
+   <!-- Swiper -->
+   <div class="swiper mySwiper">
+       <div class="swiper-wrapper">
+           <div class="swiper-slide"><img src="{% static 'images/main_banner01.png' %}"></div>
+           <div class="swiper-slide"><img src="{% static 'images/main_banner02.png' %}"></div>
+           <div class="swiper-slide"><img src="{% static 'images/main_banner03.png' %}"></div>
+           <div class="swiper-slide"><img src="{% static 'images/main_banner04.png' %}"></div>
+           <div class="swiper-slide"><img src="{% static 'images/main_banner05.png' %}"></div>
+           <div class="swiper-slide"><img src="{% static 'images/main_banner06.png' %}"></div>
+           
+       </div>
+       <!-- <div class="swiper-button-next"></div>
+       <div class="swiper-button-prev"></div> -->
+       <!-- <div class="swiper-pagination"></div> -->
+   </div>       
+           
+ </div>
+ <!-- 롤링 -->
+ <br>        
+   
+ </section>
+   <!-- website section 끝  -->
+ 
+   
+   
+ 
+    
+   
+   
+ 
+ <!-- <div class="workbottom" style="height: 10rem;background-color: #333;"><h1></h1></div> -->
+ <!-- <div class="workbottom" style="height: 10rem;background-color: #3a8de0;"><h1></h1></div> -->
+ <footer class="flex-rw">
+ 
+   <ul class="footer-list-top">
+       <li><h4 class="footer-list-header"></h4></li>        
+       <li><h4 class="footer-list-header"></h4></li>        
+       <li><span class="generic-anchor footer-list-anchor" itemprop="significantLink">사업자등록번호 : 413-10-93780</span></li>
+       <li><span class="generic-anchor footer-list-anchor" itemprop="significantLink">서울특별시 강동구 양재대로 1365(심포니타워 3층)
+ 
+       </span></li>      
+   </ul>
+   <ul class="footer-list-top">
+       <li><h4 class="footer-list-header"></h4></li>  
+       <li><h4 class="footer-list-header"></h4></li>        
+       <li><span class="generic-anchor footer-list-anchor" itemprop="significantLink">전화번호 010-4015-0127</span></li>
+       <li><span class="generic-anchor footer-list-anchor" itemprop="significantLink" style="text-transform: lowercase;">이메일 : kimtaxhelp  @naver.com</a></li>      
+   </ul>
+   
+   <ul class="footer-list-top">
+       <li id='help'><h4 class="footer-list-header"></h4></li>
+       <li><h4 class="footer-list-header"></h4></li>        
+       <li><span class="footer-social-overlap footer-social-icons-wrapper" style="align-items: center;">
+           <span id="naverbloglogo"><img src="{% static 'images/naverbloglogo.png' %}" alt="" style="width: 31px;margin: -10.6px 6px;">네이버블로그</span>
+           
+           <br>
+           
+           <!-- <a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
+           <a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
+           <a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
+           <a href="http://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
+           <a href="https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
+           <a href="https://plus.google.com/+Paviliongift/posts" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a> -->
+           </span></li>
+           <li></li>
+       
+     </ul>
+   
+      
+   
+   <!-- <section class="footer-bottom-section flex-rw">
+    <div class="footer-bottom-wrapper">   
+      <i class="fa fa-copyright" role="copyright"></i>
+      2019 Pavilion in 
+      <address class="footer-address" role="company address">Bergen, NY</address>
+      <span class="footer-bottom-rights"> - All Rights Reserved - </span>
+     </div>
+    <div class="footer-bottom-wrapper">
+     <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+    </div>
+   </section> -->
+ 
+ </footer>
+ 
+ 
+ 
+ <section id="footer">
+ 
+   <!-- <a href="#" class="logo"><h1>logo</h1></a> -->
+ 
+   <!-- <div class="icons">
+       <a href="#" class="fab fa-facebook-square"></a>
+       <a href="#" class="fab fa-twitter-square"></a>
+       <a href="#" class="fab fa-instagram-square"></a>
+       <a href="#" class="fab fa-linkedin"></a>
+   </div> -->
+   <br>
+   <h1>&copy; copyright @ 2023 by <span>기세세무회계</span></h1>
+   <br>
+   <div><a href="{% url 'customlogin' %}" class="adminbtn">관리자 로그인</a></div>
+   
+ 
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ </section>
+ <!-- <br>
+ <br>
+ <br>
+ <br> -->
+ 
+ 
+ 
+ <!-- <div style="position:fixed; bottom:0; right:0; left:0; z-index:90;"> -->
+   <div style="position:fixed; bottom:0; left:0; z-index:90; width:50%; height:50px; background:#ffe040; text-align:center; box-sizing:border-box; ">
+       <a href="" target="_blank" style="color:#43272b;">
+           <h6 class="bottommenuh6" style="">
+               <img style="width: 1.8rem;" src="{% static 'images/kakaoicons.png' %}" > 카카오톡상담
+           </h6>
+       </a>
+   </div>
+   <div style="position:fixed; bottom:0; right:0; z-index:90; width:50%; height:50px; background:#041f3c; text-align:center; box-sizing:border-box;">
+       <a href="tel:02-6261-8676" style="color:#fff;">
+           <h6 class="bottommenuh6" style="">
+               <img style="width: 1.5rem;" src="{% static 'images/phone.png' %}" > 전화상담
+           </h6>
+       </a>
+   </div>
+   <!-- </div> -->
+
+<!-- jquery/js part -->
+
+
+<script>
+
+
+
+  var swiper = new Swiper(".mySwiper", {
+          // spaceBetween: 30,
+          slidesPerView: 2,
+          // centeredSlides: true,
+          centeredSlides: false,
+          autoplay: {
+            delay: 2500,
+          //   disableOnInteraction: false,
+          disableOnInteraction: true,
+          },
+          // pagination: {
+          //   el: ".swiper-pagination",
+          //   clickable: true,
+          // },
+          // navigation: {
+          //   nextEl: ".swiper-button-next",
+          //   prevEl: ".swiper-button-prev",
+          // },
+          breakpoints: {
+        768: {
+          slidesPerView: 2
+        },
+        1200: {
+          slidesPerView: 4
+        }
+      },
+        });
+  
+  
+  
+  $(document).ready(function(){
+  
+      $('.fa-bars').click(function(){
+          $(this).toggleClass('fa-times');        
+      });
+  
+      $('nav ul li a').click(function(){
+          $('.fa-bars').removeClass('fa-times');        
+          $("#menu-bar").prop("checked", false);    
+      });
+  
+      $(window).scroll(function(){
+          if($(window).scrollTop() < 20){
+              $('header').css('box-shadow','none');
+          }else{
+              $('header').css('box-shadow','0 .2rem .5rem #333');
+          }
+      });
+  
+      
+  
+  });
+  
+  
+  // 블로그 롤링           $(".owl-blog, .owl-banner").owlCarousel({
+  $(document).ready(function(){
+      $(".owl-blog").owlCarousel({
+                nav:true,
+              //   navContainer: '.owl-nav',
+                navText: ["<img src='https://raw.githubusercontent.com/Ruben-Vardanyan/Carousel/main/arrL.png'>","<img src='https://raw.githubusercontent.com/Ruben-Vardanyan/Carousel/main/arrR.png'>"],
+                rtl: false,
+                loop:true,
+              //   margin:10,
+              //   stagePadding:50,
+                autoplay:true,
+                autoplayTimeout:3000,
+                // autoplayHoverPause:true,
+  
+                dots: true,
+                dotsEach:true,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        // nav:true
+                    },
+                    600:{
+                        items:1,
+                    },
+                    900:{
+                        items:1,
+                    },
+                    1200:{
+                        items:2,
+                        // nav:true,
+                    },
+                    1600:{
+                        items:3,
+                        // nav:true,
+                    }
+                }
+            });        
+                 
+        });
+      //   배너들 롤링
+  </script>
+  <!-- <script src="/examples/scripts/script_src.js"></script> -->   
+
+
+    
+    
+  
+</body>
+</html>    
+
+    <!-- 10 -->
+    
+
+
+

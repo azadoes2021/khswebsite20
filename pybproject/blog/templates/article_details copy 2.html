@@ -1,0 +1,306 @@
+{% extends 'header02.html' %}
+{% load humanize %}
+{% load static %}
+
+{% block content %}
+
+  
+
+
+<!-- home section 시작 -->
+
+
+
+
+ 
+ <!-- home section 끝 -->
+ 
+ <!-- career section 시작 -->
+ 
+ <section id="anchornews">
+   
+   <h1></h1>
+   <!-- <br> -->
+   <!-- <h1>{{ post.title }}</h1> -->
+   
+ 
+   
+  {% if blog.image %}
+  <img src="{{ blog.image.url }}" alt="" style="align-items: center;">
+  {% endif %}
+  </section>
+  <section id="anchornewsbody">
+  <br>
+  <h1>{{ blog.title }}</h1>
+  <br>
+  <h2>등록일: {{blog.created|date:'Y-m-d H:i'}}</h2>
+  <br/>  
+  <h2>성함: ooo 전화번호: 010-0000-0000 </h2>   <!-- 성함: {{ blog. }} 전화번호: {{ blog. }} -->
+  <br>
+  <br>
+  {{ blog.body|safe }}
+  
+  
+  
+  <br/><br/>
+  <br/><br/>
+  <!-- <input type="button" value="Go back!" onclick="history.back()"> -->
+  <a class="btn" onclick="history.back()">뒤로가기</a>
+  
+  <a href="{% url 'posts' %}" class="btn">목록</a>
+  
+  
+  {% if request.user == blog.author %}
+  <a href="{% url 'update_blog' blog.pk %}" class="btn">수정</a>
+  <a href="{% url 'delete_blog' blog.pk %}" class="btn">삭제</a>
+  {% endif %}
+</section>
+<br/><br/>
+  <br/><br/>  
+  
+  <!-- {% if user.is_authenticated %}
+  <a href="{% url 'update_blog' blog.pk %}" class="btn">Edit02</a>
+  <a href="{% url 'delete_blog' blog.pk %}" class="btn">Delete02</a>
+  {% endif %} -->
+  
+  
+  
+  
+  
+  
+ 
+ <!-- career section 시작 -->
+ 
+ 
+   
+ 
+ 
+ 
+    
+   
+   
+ 
+ <!-- <div class="workbottom" style="height: 10rem;background-color: #333;"><h1></h1></div> -->
+ <!-- <div class="workbottom" style="height: 10rem;background-color: #3a8de0;"><h1></h1></div> -->
+ <footer class="flex-rw">
+ 
+   <ul class="footer-list-top">
+       <li><h4 class="footer-list-header"></h4></li>        
+       <li><h4 class="footer-list-header"></h4></li>        
+       <li><span class="generic-anchor footer-list-anchor" itemprop="significantLink">사업자등록번호 : 413-10-93780</span></li>
+       <li><span class="generic-anchor footer-list-anchor" itemprop="significantLink">서울특별시 강동구 양재대로 1365(심포니타워 3층)
+ 
+       </span></li>      
+   </ul>
+   <ul class="footer-list-top">
+       <li><h4 class="footer-list-header"></h4></li>  
+       <li><h4 class="footer-list-header"></h4></li>        
+       <li><span class="generic-anchor footer-list-anchor" itemprop="significantLink">전화번호 010-4015-0127</span></li>
+       <li><span class="generic-anchor footer-list-anchor" itemprop="significantLink" style="text-transform: lowercase;">이메일 : kimtaxhelp  @naver.com</a></li>      
+   </ul>
+   
+   <ul class="footer-list-top">
+       <li id='help'><h4 class="footer-list-header"></h4></li>
+       <li><h4 class="footer-list-header"></h4></li>        
+       <li><span class="footer-social-overlap footer-social-icons-wrapper" style="align-items: center;">
+           <span id="naverbloglogo"><img src="{% static 'images/naverbloglogo.png' %}" alt="" style="width: 31px;margin: -10.6px 6px;">네이버블로그</span>
+           
+           <br>
+           
+           <!-- <a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
+           <a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
+           <a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
+           <a href="http://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
+           <a href="https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
+           <a href="https://plus.google.com/+Paviliongift/posts" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a> -->
+           </span></li>
+           <li></li>
+       
+     </ul>
+   
+      
+   
+   <!-- <section class="footer-bottom-section flex-rw">
+    <div class="footer-bottom-wrapper">   
+      <i class="fa fa-copyright" role="copyright"></i>
+      2019 Pavilion in 
+      <address class="footer-address" role="company address">Bergen, NY</address>
+      <span class="footer-bottom-rights"> - All Rights Reserved - </span>
+     </div>
+    <div class="footer-bottom-wrapper">
+     <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+    </div>
+   </section> -->
+ 
+ </footer>
+ 
+ 
+ 
+ <section id="footer">
+ 
+   <!-- <a href="#" class="logo"><h1>logo</h1></a> -->
+ 
+   <!-- <div class="icons">
+       <a href="#" class="fab fa-facebook-square"></a>
+       <a href="#" class="fab fa-twitter-square"></a>
+       <a href="#" class="fab fa-instagram-square"></a>
+       <a href="#" class="fab fa-linkedin"></a>
+   </div> -->
+   <br>
+   <h1>&copy; copyright @ 2023 by <span>기세세무회계</span></h1>
+   <br>
+   <div><a href="{% url 'customlogin' %}" class="adminbtn">관리자 로그인</a></div>
+   
+ 
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ </section>
+ <!-- <br>
+ <br>
+ <br>
+ <br> -->
+ 
+ 
+ 
+ <!-- <div style="position:fixed; bottom:0; right:0; left:0; z-index:90;"> -->
+   <div style="position:fixed; bottom:0; left:0; z-index:90; width:50%; height:50px; background:#ffe040; text-align:center; box-sizing:border-box; ">
+       <a href="http://pf.kakao.com/_excRcxj/chat" target="_blank" style="color:#43272b;">
+           <h6 class="bottommenuh6" style="">
+               <img style="width: 1.8rem;" src="{% static 'images/kakaoicons.png' %}" > 카카오톡상담
+           </h6>
+       </a>
+   </div>
+   <div style="position:fixed; bottom:0; right:0; z-index:90; width:50%; height:50px; background:#041f3c; text-align:center; box-sizing:border-box;">
+       <a href="tel:010-4015-0127" style="color:#fff;">
+           <h6 class="bottommenuh6" style="">
+               <img style="width: 1.5rem;" src="{% static 'images/phone.png' %}" > 전화상담
+           </h6>
+       </a>
+   </div>
+   <!-- </div> -->
+
+<!-- jquery/js part -->
+
+
+<script>
+
+
+
+  var swiper = new Swiper(".mySwiper", {
+          // spaceBetween: 30,
+          slidesPerView: 2,
+          // centeredSlides: true,
+          centeredSlides: false,
+          autoplay: {
+            delay: 2500,
+          //   disableOnInteraction: false,
+          disableOnInteraction: true,
+          },
+          // pagination: {
+          //   el: ".swiper-pagination",
+          //   clickable: true,
+          // },
+          // navigation: {
+          //   nextEl: ".swiper-button-next",
+          //   prevEl: ".swiper-button-prev",
+          // },
+          breakpoints: {
+        768: {
+          slidesPerView: 2
+        },
+        1200: {
+          slidesPerView: 4
+        }
+      },
+        });
+  
+  
+  
+  $(document).ready(function(){
+  
+      $('.fa-bars').click(function(){
+          $(this).toggleClass('fa-times');        
+      });
+  
+      $('nav ul li a').click(function(){
+          $('.fa-bars').removeClass('fa-times');        
+          $("#menu-bar").prop("checked", false);    
+      });
+  
+      $(window).scroll(function(){
+          if($(window).scrollTop() < 20){
+              $('header').css('box-shadow','none');
+          }else{
+              $('header').css('box-shadow','0 .2rem .5rem #333');
+          }
+      });
+  
+      
+  
+  });
+  
+  
+  // 블로그 롤링           $(".owl-blog, .owl-banner").owlCarousel({
+  $(document).ready(function(){
+      $(".owl-blog").owlCarousel({
+                nav:true,
+              //   navContainer: '.owl-nav',
+                navText: ["<img src='https://raw.githubusercontent.com/Ruben-Vardanyan/Carousel/main/arrL.png'>","<img src='https://raw.githubusercontent.com/Ruben-Vardanyan/Carousel/main/arrR.png'>"],
+                rtl: false,
+                loop:true,
+              //   margin:10,
+              //   stagePadding:50,
+                autoplay:true,
+                autoplayTimeout:3000,
+                // autoplayHoverPause:true,
+  
+                dots: true,
+                dotsEach:true,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        // nav:true
+                    },
+                    600:{
+                        items:1,
+                    },
+                    900:{
+                        items:1,
+                    },
+                    1200:{
+                        items:2,
+                        // nav:true,
+                    },
+                    1600:{
+                        items:3,
+                        // nav:true,
+                    }
+                }
+            });        
+                 
+        });
+      //   배너들 롤링
+  </script>
+  <!-- <script src="/examples/scripts/script_src.js"></script> -->   
+
+
+    
+    
+  
+
+
+
+    <!-- 10 -->
+  
+
+    
+
+
+
+
+{% endblock %}

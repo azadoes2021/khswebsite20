@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+<!-- 얘도 꼭 넣기 안 넣으면 css/js 적용 안 됨 -->
+{% load static %}
+<!-- base.html에 넣어두었던 곳 사이에 signup.html에 적용할 css파일 경로 끼워넣기 -->
+{% block static %}
+    <link rel="stylesheet" href="{% static '/css/signin.css' %}">
+{% endblock %}
+{% block content %}
+
+
+
+<style>
+  .errormessage ul {
+    margin: -15px 0px 15px 28px;
+    font-size: 13px;
+  }
+</style>
+<div class="main">
+  <div class="login">
+    <h1>관리자 로그인</h1>
+
+    <div> {{ error }} </div>
+      <form method="post" action=".">      
+        {% csrf_token %}
+        {% for field in form %}
+        <p style="margin-left: 30px;padding-top: 0px;">{{ field.label }}</p><br>
+        <!-- <br> -->
+        <input type="{{ field.field.widget.input_type }}" class="txt" id="{{ field.id_for_label }}" 
+            placeholder="{{ field.label }}" name="{{ field.name }}">
+        <hr><br>  
+        {% if field.errors %}
+        <span class="errormessage" style="color:red;">{{ field.errors}}</span>
+        {% endif %}
+        {% endfor %}
+        <p class="fp">
+          <!-- <a href="#">비밀번호를 잊으셨나요?</a> -->
+          <a href="#"></a>
+        </p>      
+        <button type="submit" class="loginbtn" style="
+        margin-left: 70px;
+        margin-top: 30px;
+        padding: 10px 80px;
+        border: none;
+        border-radius: 20px;
+        background: #3A8DFD;
+        color: white;
+        font-weight: 700;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: 0.3s;
+    ">로그인</button>
+      </form>
+      <!-- <p class="signup">Or Signup using </p> -->
+    </div>
+    <br>
+    <!-- <div class="contact">
+      <a href="#"><i class="fa fa-facebook-square" style="color:rgb(56, 56, 241);font-size: xx-large;" aria-hidden="true"></i>
+      </a> <a href="#"><i class="fa fa-twitter-square" style="color: rgb(48, 112, 248); font-size: xx-large; " aria-hidden="true"></i>           </a>
+      <a href="#"> <i class="fa fa-google-plus" style="color: red; font-size: xx-large;" aria-hidden="true"></i></a>
+    </div> -->
+    
+    <!-- <div class="last">
+      <p class="signup2">Or Signup using</p>
+      <p><a href="#">SIGNUP</a> </p>
+    </div>
+</div> -->
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
